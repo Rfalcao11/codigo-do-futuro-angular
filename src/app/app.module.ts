@@ -7,9 +7,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { FormatarCpfPipe } from './pipes/formatar-cpf.pipe';
 import { FormatarTelefonePipe } from './pipes/formatar-telefone.pipe';
 import { RouteReuseStrategy } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 
 registerLocaleData(ptBr)
@@ -20,11 +23,13 @@ registerLocaleData(ptBr)
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    FormatarTelefonePipe
+    FormatarTelefonePipe,
+    FormatarCpfPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt'},
