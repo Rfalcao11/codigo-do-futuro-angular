@@ -14,6 +14,10 @@ import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './paginas/form/form.component';
 import { ContactListComponent } from './paginas/contact-list/contact-list.component';
+import { ClientesNotificacaoComponent } from './componentes/clientes-notificacao/clientes-notificacao.component';
+import { PortfolioComponent } from './paginas/portfolio/portfolio.component';
+import { SobreComponent } from './paginas/sobre/sobre.component';
+import { NaoEncontradaComponent } from './paginas/nao-encontrada/nao-encontrada.component';
 
 
 
@@ -28,7 +32,11 @@ registerLocaleData(ptBr)
     FormatarTelefonePipe,
     FormatarCpfPipe,
     FormComponent,
-    ContactListComponent
+    ContactListComponent,
+    ClientesNotificacaoComponent,
+    PortfolioComponent,
+    SobreComponent,
+    NaoEncontradaComponent
   ],
   imports: [
     BrowserModule,

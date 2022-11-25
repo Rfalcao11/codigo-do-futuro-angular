@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ClienteObserverServicoService } from 'src/app/servicos/ClienteObserverServico.service';
 import { ClienteServico } from 'src/app/servicos/clienteServico';
 import { Cliente } from '../../models/cliente';
 
@@ -12,7 +13,9 @@ export class FormComponent implements OnInit {
 
   constructor(
     private router:Router, 
-    private routerParams: ActivatedRoute){}
+    private routerParams: ActivatedRoute,
+    private clienteObserverServicoService: ClienteObserverServicoService)
+    {}
 
   
   
@@ -47,6 +50,7 @@ export class FormComponent implements OnInit {
       
     });
     }
+    this.clienteObserverServicoService.atualizaQuantidade();
     this.router.navigateByUrl("/contatos")
 
    // ClienteServico.adicionaCliente(novoCliente)
