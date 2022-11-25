@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteObserverServicoService } from 'src/app/servicos/ClienteObserverServico.service';
 import { ClienteServico } from 'src/app/servicos/clienteServico';
@@ -14,10 +14,8 @@ export class ClientesNotificacaoComponent implements OnInit {
   constructor(
     
     public clienteObserverServicoService: ClienteObserverServicoService) 
-  { 
-    
-    }
-  
+  { }
+   
 
   ngOnInit(): void {
     
