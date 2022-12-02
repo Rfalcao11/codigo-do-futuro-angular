@@ -40,12 +40,12 @@ export class FormComponent implements OnInit {
     }else{
     
     ClienteServico.adicionaCliente({
-      id: 0,
+      id: 1,
       nome: this.cliente.nome,
       telefone: 11999999999,
       endereco: this.cliente.endereco, 
       data: new Date(),
-      valor: 0,
+      valor: this.cliente.valor,
       cpf:33333333333
       
     });
